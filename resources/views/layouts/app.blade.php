@@ -41,10 +41,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <li class="nav-item {{ is_current_route('login') }}">
                     <a class="nav-link" href="{{ route('login') }}">Anmelden</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item {{ is_current_route('register') }}">
                     <a class="nav-link" href="{{ route('register') }}">Registrieren</a>
                 </li>
             </ul>
