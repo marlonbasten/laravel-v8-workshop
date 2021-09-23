@@ -22,6 +22,10 @@
                                 <label for="password">Passwort</label>
                                 <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password">
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label for="remember">Login speichern</label>
+                            </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Anmelden">
                             </div>
