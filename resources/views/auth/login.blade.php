@@ -16,18 +16,21 @@
                             @csrf
                             <div class="form-group">
                                 <label for="email">E-Mail</label>
-                                <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control" required autofocus>
+                                <input type="email" id="email" name="email" value="{{ old('email') }}"
+                                       class="form-control" required autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="password">Passwort</label>
-                                <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password">
+                                <input type="password" id="password" name="password" class="form-control" required
+                                       autocomplete="current-password">
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <input class="form-check-input" type="checkbox" name="remember"
+                                       id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label for="remember">Login speichern</label>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Anmelden">
+                                <input type="submit" name="login" class="btn btn-primary" value="Anmelden">
                             </div>
                         </form>
 

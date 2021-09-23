@@ -11,7 +11,11 @@ class PostController extends Controller
 {
     public function index(): View
     {
-        return view('backend.post.index');
+        $posts = Post::with('user')->paginate(10);
+
+        return view('backend.post.index', [
+            'posts' => $posts,
+        ]);
     }
 
     public function create(): View
