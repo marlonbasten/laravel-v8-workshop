@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('index') }}">Home</a>
+                    <a class="nav-link" href="{{ route('index') }}">Startseite</a>
                 </li>
             </ul>
             <ul class="navbar-nav my-2 my-lg-0">
