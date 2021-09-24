@@ -2,8 +2,14 @@
 
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\PostController;
+use App\Http\Controllers\TestController;
 
 Route::get('/', [BackendController::class, 'index'])->name('index');
+
+Route::get('test', [TestController::class, 'test'])->name('test');
+
+Route::post('upload', [BackendController::class, 'upload'])->name('upload');
+Route::get('image/{file}', [BackendController::class, 'image'])->name('image');
 
 Route::prefix('post')->name('post.')->group(function () {
 

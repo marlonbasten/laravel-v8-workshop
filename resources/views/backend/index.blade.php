@@ -14,6 +14,16 @@
 
                         <p>Hey, willkommen im Laravel 8 Workshop!</p>
 
+                        @if ($file)
+                            <img src="{{ asset('storage/'.$file->path) }}" alt="{{ $file->name }}">
+                        @endif
+
+                        <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="file" name="image" id="image">
+                            <input type="submit" class="btn btn-primary" value="Hochladen">
+                        </form>
+
                     </div>
                     {{-- End content --}}
                 </div>
